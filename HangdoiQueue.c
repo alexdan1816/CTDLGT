@@ -37,7 +37,7 @@ void display(Queue Q)
     }
 }
 
-int deQueue(queue *Q)
+int deQueue(Queue *Q)
 {
     if(Q->front=-1)
     {
@@ -47,7 +47,7 @@ int deQueue(queue *Q)
     else
     {
         Q->front++;
-    return (Q->infor[Q])
+    return (Q->infor[Q->front]);
     }
 }
 int main()

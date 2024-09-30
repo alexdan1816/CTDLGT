@@ -8,14 +8,14 @@ typedef struct
     unsigned int n;
 }Stack;
 
-void initialize(Stack *S)
+void initialize(Stack *S) //hàm khởi tạo
 {
     S->n=0;
     S->rear=-1;
 
 }
 
-void enStack(Stack *S,int k)
+void enStack(Stack *S,int k) //hàm thêm dữ liệu thông thường
 {
     if(S->rear==-1)
     {
@@ -33,7 +33,7 @@ void enStack(Stack *S,int k)
     }
 }
 
-int insStack(Stack *S, int value, int position)
+int insStack(Stack *S, int value, int position) //hàm chèn dữ liệu 
 {
     if(S->rear==MAX-1)
     {
@@ -66,7 +66,7 @@ int insStack(Stack *S, int value, int position)
         }
     }
 }
-int deStack(Stack *S,int position)
+int deStack(Stack *S,int position) //hàm xóa dữ liệu bất kì
 {
     if(position>S->rear||position<0)
     {
@@ -85,7 +85,7 @@ int deStack(Stack *S,int position)
 }
 
 
-void display(Stack *S)
+void display(Stack *S) //hàm hiển thị
 {
     
     for(int i=0;i<=S->rear;i++)
